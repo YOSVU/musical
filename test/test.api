@@ -7,6 +7,11 @@ type Response {
 }
 
 service test-api {
-	@handler TestHandler
+	@handler FromHandler
 	get /from/:name(Request) returns (Response)
+}
+
+service test-api {
+	@handler ToHandler
+	get /to/:name(Request) returns (Response)
 }
